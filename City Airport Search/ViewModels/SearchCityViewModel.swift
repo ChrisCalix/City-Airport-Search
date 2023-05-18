@@ -31,14 +31,38 @@ final class SearchCityViewModel: SearchCityViewModelPresentable {
     
     init(input: SearchCityViewModelPresentable.Input, airportAPIService: APIService) {
         self.input = input
-        self.output = SearchCityViewModel.output(input: input)
+        self.output = SearchCityViewModel.output(input: input, state: state, bag: disposeBag)
         self.airportAPIService = airportAPIService
         self.process()
     }
 }
 
 private extension SearchCityViewModel {
-    static func output(input: SearchCityViewModelPresentable.Input) {
+    static func output(input: SearchCityViewModelPresentable.Input, state: State, bag: DisposeBag) {
+        
+        let searchTextObservable = input.searchText
+            .debounce(.milliseconds(300))
+            .distinctUntilChanged()
+            .skip(1)
+            .asObservable()
+            .share(replay: 1, scope: .whileConnected)
+        let airportsObservable = state.airports.skip(1).asObservable()
+        
+        Observable
+            .combineLatest(searchTextObservable, airportsObservable)
+            .map({ searchkey, airports in
+                return airports.filter({ airport -> Bool in
+                    !searchkey.isEmpty &&
+                    airport.city.lowercased().replacingOccurrences(of: " ", with: "")
+                        .hasPrefix(searchkey.lowercased())
+                })
+            })
+            .map {
+                print($0)
+            }
+            .subscribe()
+            .disposed(by: bag)
+        
         return ()
     }
     
