@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31E4AD32A16C4000017F328 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4AD22A16C4000017F328 /* AppCoordinator.swift */; };
 		C3F0B2782A16B39D00BF63D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2772A16B39D00BF63D8 /* AppDelegate.swift */; };
 		C3F0B27A2A16B39D00BF63D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2792A16B39D00BF63D8 /* SceneDelegate.swift */; };
 		C3F0B27C2A16B39D00BF63D8 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B27B2A16B39D00BF63D8 /* SearchCityViewController.swift */; };
@@ -20,10 +21,11 @@
 		C3F0B29C2A16BE3200BF63D8 /* SearchCityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B29B2A16BE3200BF63D8 /* SearchCityCoordinator.swift */; };
 		C3F0B29E2A16BE5900BF63D8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B29D2A16BE5900BF63D8 /* Coordinator.swift */; };
 		C3F0B2A02A16BF3800BF63D8 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B29F2A16BF3800BF63D8 /* BaseCoordinator.swift */; };
-		C3F0B2A32A16BFB000BF63D8 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2A22A16BFB000BF63D8 /* Storyboardable.swift */; };
+		C3F0B2A32A16BFB000BF63D8 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2A22A16BFB000BF63D8 /* UIViewController+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C31E4AD22A16C4000017F328 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C3F0B2742A16B39D00BF63D8 /* City Airport Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Airport Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F0B2772A16B39D00BF63D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F0B2792A16B39D00BF63D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		C3F0B29B2A16BE3200BF63D8 /* SearchCityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityCoordinator.swift; sourceTree = "<group>"; };
 		C3F0B29D2A16BE5900BF63D8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C3F0B29F2A16BF3800BF63D8 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		C3F0B2A22A16BFB000BF63D8 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		C3F0B2A22A16BFB000BF63D8 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 		C3F0B2762A16B39D00BF63D8 /* City Airport Search */ = {
 			isa = PBXGroup;
 			children = (
-				C3F0B2A12A16BF9900BF63D8 /* Shared */,
+				C3F0B2A12A16BF9900BF63D8 /* Extensions */,
 				C3F0B29A2A16BE2400BF63D8 /* Coodinators */,
 				C3F0B2912A16B8B700BF63D8 /* ViewModels */,
 				C3F0B2902A16B8AF00BF63D8 /* Views */,
@@ -116,16 +118,17 @@
 				C3F0B29B2A16BE3200BF63D8 /* SearchCityCoordinator.swift */,
 				C3F0B29D2A16BE5900BF63D8 /* Coordinator.swift */,
 				C3F0B29F2A16BF3800BF63D8 /* BaseCoordinator.swift */,
+				C31E4AD22A16C4000017F328 /* AppCoordinator.swift */,
 			);
 			path = Coodinators;
 			sourceTree = "<group>";
 		};
-		C3F0B2A12A16BF9900BF63D8 /* Shared */ = {
+		C3F0B2A12A16BF9900BF63D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C3F0B2A22A16BFB000BF63D8 /* Storyboardable.swift */,
+				C3F0B2A22A16BFB000BF63D8 /* UIViewController+extension.swift */,
 			);
-			path = Shared;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +215,9 @@
 				C3F0B2782A16B39D00BF63D8 /* AppDelegate.swift in Sources */,
 				C3F0B29E2A16BE5900BF63D8 /* Coordinator.swift in Sources */,
 				C3F0B29C2A16BE3200BF63D8 /* SearchCityCoordinator.swift in Sources */,
-				C3F0B2A32A16BFB000BF63D8 /* Storyboardable.swift in Sources */,
+				C3F0B2A32A16BFB000BF63D8 /* UIViewController+extension.swift in Sources */,
 				C3F0B2A02A16BF3800BF63D8 /* BaseCoordinator.swift in Sources */,
+				C31E4AD32A16C4000017F328 /* AppCoordinator.swift in Sources */,
 				C3F0B27A2A16B39D00BF63D8 /* SceneDelegate.swift in Sources */,
 				C3F0B2932A16B8FC00BF63D8 /* SearchCityViewModel.swift in Sources */,
 			);
@@ -367,7 +371,6 @@
 				INFOPLIST_FILE = "City Airport Search/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -395,7 +398,6 @@
 				INFOPLIST_FILE = "City Airport Search/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

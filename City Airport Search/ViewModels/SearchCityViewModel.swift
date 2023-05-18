@@ -12,6 +12,7 @@ protocol SearchCityViewModelPresentable {
         searchText: Driver<String>, ()
     )
     typealias Ouput = ()
+    typealias ViewModelBuilder = (SearchCityViewModelPresentable.Input) -> SearchCityViewModelPresentable
     
     var input: SearchCityViewModelPresentable.Input { get }
     var output: SearchCityViewModelPresentable.Ouput { get }
