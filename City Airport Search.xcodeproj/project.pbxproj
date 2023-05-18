@@ -16,6 +16,7 @@
 		C3F0B28F2A16B4BC00BF63D8 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3F0B28E2A16B4BC00BF63D8 /* RxSwift */; };
 		C3F0B2932A16B8FC00BF63D8 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2922A16B8FC00BF63D8 /* SearchCityViewModel.swift */; };
 		C3F0B2962A16BA6C00BF63D8 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = C3F0B2952A16BA6C00BF63D8 /* RxDataSources */; };
+		C3F0B2992A16BB7700BF63D8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C3F0B2982A16BB7700BF63D8 /* RxCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F0B2992A16BB7700BF63D8 /* RxCocoa in Frameworks */,
 				C3F0B2962A16BA6C00BF63D8 /* RxDataSources in Frameworks */,
 				C3F0B28F2A16B4BC00BF63D8 /* RxSwift in Frameworks */,
 			);
@@ -48,6 +50,7 @@
 			children = (
 				C3F0B2762A16B39D00BF63D8 /* City Airport Search */,
 				C3F0B2752A16B39D00BF63D8 /* Products */,
+				C3F0B2972A16BB7700BF63D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +93,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		C3F0B2972A16BB7700BF63D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +119,7 @@
 			packageProductDependencies = (
 				C3F0B28E2A16B4BC00BF63D8 /* RxSwift */,
 				C3F0B2952A16BA6C00BF63D8 /* RxDataSources */,
+				C3F0B2982A16BB7700BF63D8 /* RxCocoa */,
 			);
 			productName = "City Airport Search";
 			productReference = C3F0B2742A16B39D00BF63D8 /* City Airport Search.app */;
@@ -420,6 +431,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3F0B2942A16BA6C00BF63D8 /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
+		};
+		C3F0B2982A16BB7700BF63D8 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3F0B28B2A16B4BC00BF63D8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
