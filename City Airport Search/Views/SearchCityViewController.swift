@@ -9,13 +9,13 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-final class SearchCityViewController: UIViewController {
+final class SearchCityViewController: UIViewController, Storyboardable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var contentSearchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     
-    var viewModel: SearchCityViewModelPresentable!
+    private var viewModel: SearchCityViewModelPresentable!
 
     override func viewDidLoad() {
         super.viewDidLoad()
