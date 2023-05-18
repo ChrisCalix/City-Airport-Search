@@ -19,7 +19,7 @@ final class SearchCityCoordinator: BaseCoordinator {
             return
         }
         view.viewModilBuilder = {
-            SearchCityViewModel(input: $0)
+            SearchCityViewModel(input: $0, airportAPIService: AirportAPIService(router: AirportAPIRouter.getAirports))
         }
         navigationController.pushViewController(view, animated: true)
     }
