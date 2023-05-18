@@ -13,6 +13,8 @@
 		C3F0B27F2A16B39D00BF63D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F0B27D2A16B39D00BF63D8 /* Main.storyboard */; };
 		C3F0B2812A16B39F00BF63D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F0B2802A16B39F00BF63D8 /* Assets.xcassets */; };
 		C3F0B2842A16B39F00BF63D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F0B2822A16B39F00BF63D8 /* LaunchScreen.storyboard */; };
+		C3F0B28D2A16B4BC00BF63D8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C3F0B28C2A16B4BC00BF63D8 /* RxCocoa */; };
+		C3F0B28F2A16B4BC00BF63D8 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3F0B28E2A16B4BC00BF63D8 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F0B28F2A16B4BC00BF63D8 /* RxSwift in Frameworks */,
+				C3F0B28D2A16B4BC00BF63D8 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = "City Airport Search";
+			packageProductDependencies = (
+				C3F0B28C2A16B4BC00BF63D8 /* RxCocoa */,
+				C3F0B28E2A16B4BC00BF63D8 /* RxSwift */,
+			);
 			productName = "City Airport Search";
 			productReference = C3F0B2742A16B39D00BF63D8 /* City Airport Search.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = C3F0B26B2A16B39D00BF63D8;
+			packageReferences = (
+				C3F0B28B2A16B4BC00BF63D8 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = C3F0B2752A16B39D00BF63D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,8 +304,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +332,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +369,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3F0B28B2A16B4BC00BF63D8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3F0B28C2A16B4BC00BF63D8 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3F0B28B2A16B4BC00BF63D8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C3F0B28E2A16B4BC00BF63D8 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3F0B28B2A16B4BC00BF63D8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3F0B26C2A16B39D00BF63D8 /* Project object */;
 }
