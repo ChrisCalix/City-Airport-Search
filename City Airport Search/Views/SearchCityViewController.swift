@@ -12,7 +12,11 @@ import RxDataSources
 class SearchCityViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var contentSearchView: UIView!
+    @IBOutlet weak var contentSearchView: UIView!{
+        didSet {
+            contentSearchView.backgroundColor = UIColor.primaryColor
+        }
+    }
     @IBOutlet weak var searchTextField: UITextField!
     
     private var viewModel: SearchCityViewModelPresentable!
@@ -20,10 +24,12 @@ class SearchCityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
         viewModel = viewModilBuilder((
             searchText: searchTextField.rx.text.orEmpty.asDriver(), ()
         ))
+        self.title = "Airports"
     }
 
 

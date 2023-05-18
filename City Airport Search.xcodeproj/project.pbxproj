@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C31E4AD32A16C4000017F328 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4AD22A16C4000017F328 /* AppCoordinator.swift */; };
+		C31E4AD52A16C9BF0017F328 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4AD42A16C9BF0017F328 /* Color+Extension.swift */; };
 		C3F0B2782A16B39D00BF63D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2772A16B39D00BF63D8 /* AppDelegate.swift */; };
 		C3F0B27A2A16B39D00BF63D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2792A16B39D00BF63D8 /* SceneDelegate.swift */; };
 		C3F0B27C2A16B39D00BF63D8 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B27B2A16B39D00BF63D8 /* SearchCityViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		C31E4AD22A16C4000017F328 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C31E4AD42A16C9BF0017F328 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		C3F0B2742A16B39D00BF63D8 /* City Airport Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Airport Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F0B2772A16B39D00BF63D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F0B2792A16B39D00BF63D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C3F0B2A22A16BFB000BF63D8 /* UIViewController+extension.swift */,
+				C31E4AD42A16C9BF0017F328 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F0B27C2A16B39D00BF63D8 /* SearchCityViewController.swift in Sources */,
+				C31E4AD52A16C9BF0017F328 /* Color+Extension.swift in Sources */,
 				C3F0B2782A16B39D00BF63D8 /* AppDelegate.swift in Sources */,
 				C3F0B29E2A16BE5900BF63D8 /* Coordinator.swift in Sources */,
 				C3F0B29C2A16BE3200BF63D8 /* SearchCityCoordinator.swift in Sources */,
