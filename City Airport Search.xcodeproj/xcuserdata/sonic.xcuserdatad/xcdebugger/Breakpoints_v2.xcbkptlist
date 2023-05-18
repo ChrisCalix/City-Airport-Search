@@ -30,8 +30,8 @@
             filePath = "City Airport Search/ViewModels/SearchCityViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "process()"
             landmarkType = "7">
             <Locations>
