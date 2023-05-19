@@ -50,6 +50,7 @@ private extension AirportViewModel {
                 arg.models.compactMap({
                     AirportViewModel(using: $0, currentLocation: arg.currentLocation ?? (lat: 0, lon: 0))
                 })
+                .sorted()
             })
             .map({ [AirportItemsSection(model: 0, items: $0)]})
             .asDriver(onErrorJustReturn: [])
@@ -58,5 +59,16 @@ private extension AirportViewModel {
             title: Driver.just(dependencies.title),
             airports: sections
         )
+    }
+}
+
+extension AirportViewModel: Comparable {
+    
+    static func < (lhs: AirportViewModel, rhs: AirportViewModel) -> Bool {
+        return lhs.distance ?? 0 < rhs.distance ?? 0
+    }
+    
+    static func == (lhs: AirportViewModel, rhs: AirportViewModel) -> Bool {
+        return lhs.code == rhs.code
     }
 }
