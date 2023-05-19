@@ -33,13 +33,13 @@ struct AirportViewModel : AirportViewPresentable{
 }
 
 extension AirportViewModel {
-    init(using model: AirportModel) {
+    init(using model: AirportModel, currentLocation: (lat: Double, lon: Double)) {
         name = model.name
         code = model.code
         address = "\(model.state ?? ""), \(model.country)"
         runwayLength = "Runway Lungth: \(model.runwayLength ?? "NA")"
         location = (lat: model.lat, lon: model.lon)
-        // TODO: Distaning calculation from current location to airport
-        distance = 0
+        distance = LocationService.getDistance(airportLocation: (lat: Double(model.lat), lon: Double(model.lon)), currentLocation: currentLocation)
     }
 }
+

@@ -3,4 +3,54 @@
    uuid = "9B03A8D1-7DA1-485A-8824-1D1B2408F5C9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E04D5E00-E495-4414-A08C-96C93228E583"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "City Airport Search/Services/Localization/LocalizationService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E04D5E00-E495-4414-A08C-96C93228E583 - c6b294db54e5de3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "City_Airport_Search.LocationService.locationManager(_: __C.CLLocationManager, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "City Airport Search"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sonic/Documents/iOSDev/City%20Airport%20Search/City%20Airport%20Search/Services/Localization/LocalizationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "E04D5E00-E495-4414-A08C-96C93228E583 - c6b294db54e5de3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "City_Airport_Search.LocationService.locationManager(_: __C.CLLocationManager, didUpdateLocations: Swift.Array&lt;__C.CLLocation&gt;) -&gt; ()"
+                  moduleName = "City Airport Search"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sonic/Documents/iOSDev/City%20Airport%20Search/City%20Airport%20Search/Services/Localization/LocalizationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

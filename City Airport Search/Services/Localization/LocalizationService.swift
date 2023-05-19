@@ -23,10 +23,6 @@ final class LocationService: NSObject {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         manager.requestAlwaysAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            manager.startUpdatingLocation()
-        }
     }
     
     deinit {
@@ -35,6 +31,12 @@ final class LocationService: NSObject {
 }
 
 extension LocationService: CLLocationManagerDelegate {
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .authorizedWhenInUse || manager.authorizationStatus == .authorizedAlways {
+            manager.startUpdatingLocation()
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
@@ -46,4 +48,17 @@ extension LocationService: CLLocationManagerDelegate {
         }
         manager.stopUpdatingLocation()
     }
+}
+
+
+extension LocationService {
+    
+    static func getDistance(
+        airportLocation: (lat: Double?, lon: Double?),
+        currentLocation: (lat: Double, lon: Double)) -> Double? {
+            guard let airpotLat = airportLocation.lat, let airportLon = airportLocation.lon  else { return nil }
+            let current = CLLocation(latitude: currentLocation.lat, longitude: currentLocation.lon)
+            let airport = CLLocation(latitude: airpotLat, longitude: airportLon)
+            return current.distance(from: airport)
+        }
 }

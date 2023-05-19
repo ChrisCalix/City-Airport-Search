@@ -23,7 +23,8 @@ protocol AirportsViewPresentable {
     )
     typealias Dependencies = (
         title: String,
-        models: Set<AirportModel>
+        models: Set<AirportModel>,
+        currentLocation: Observable<(lat: Double, lon: Double)?>
     )
     typealias viewModelBuilder = (AirportsViewPresentable.Input) -> AirportsViewPresentable
     
@@ -43,9 +44,15 @@ struct AirportsViewModel: AirportsViewPresentable {
 
 private extension AirportViewModel {
     static func output(_ dependencies: AirportsViewPresentable.Dependencies) -> AirportsViewPresentable.Output {
-        let sections = Driver.just(dependencies.models)
-            .map({$0.compactMap(AirportViewModel.init)})
+        let sections = Observable.just(dependencies.models)
+            .withLatestFrom(dependencies.currentLocation) {(models: $0, currentLocation: $1)}
+            .map({ arg in
+                arg.models.compactMap({
+                    AirportViewModel(using: $0, currentLocation: arg.currentLocation ?? (lat: 0, lon: 0))
+                })
+            })
             .map({ [AirportItemsSection(model: 0, items: $0)]})
+            .asDriver(onErrorJustReturn: [])
         
         return (
             title: Driver.just(dependencies.title),

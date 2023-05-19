@@ -19,9 +19,11 @@ final class AirportsCoordinator: BaseCoordinator {
     
     override func start() {
         guard let view = AirportsViewController.instantiate() else { return }
+        let locationService = LocationService.shared
+        
         view.viewModelBuilder = { [models] in
             let title = models.first?.city ?? ""
-            return AirportsViewModel(input: $0, dependencies: (title: title, models: models))
+            return AirportsViewModel(input: $0, dependencies: (title: title, models: models, currentLocation: locationService.currentLocation))
         }
         self.navigationController.pushViewController(view, animated: true)
     }
