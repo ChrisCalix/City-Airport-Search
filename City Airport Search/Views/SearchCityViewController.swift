@@ -19,7 +19,7 @@ class SearchCityViewController: UIViewController {
         }
     }
     
-    var viewModilBuilder: SearchCityViewModelPresentable.ViewModelBuilder!
+    var viewModelBuilder: SearchCityViewModelPresentable.ViewModelBuilder!
     private let bag = DisposeBag()
     private var viewModel: SearchCityViewModelPresentable!
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<CityItemsSection> { _, tableView, indexPath, item in
@@ -30,8 +30,9 @@ class SearchCityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = viewModilBuilder((
-            searchText: searchTextField.rx.text.orEmpty.asDriver(), ()
+        viewModel = viewModelBuilder((
+            searchText: searchTextField.rx.text.orEmpty.asDriver(),
+            citySelect: tableView.rx.modelSelected(CityViewModel.self).asDriver()
         ))
         setupUI()
         setupBinding()
@@ -45,7 +46,7 @@ private extension SearchCityViewController {
     }
     
     func setupBinding() {
-        viewModel.output.cities
+        viewModel.output?.cities
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
     }
