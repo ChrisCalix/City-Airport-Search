@@ -20,6 +20,6 @@ class CityTableViewCell: UITableViewCell {
     func configure(using viewModel: CityViewPresentable) {
         cityLabel.text = viewModel.city
         locationLabel.text = viewModel.location
+        self.selectionStyle = .none
     }
-    
 }
