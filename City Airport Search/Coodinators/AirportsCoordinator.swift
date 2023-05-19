@@ -9,11 +9,11 @@ import UIKit
 
 final class AirportsCoordinator: BaseCoordinator {
     
-    private let navigationController: UINavigationController
+    private let rooter: Routing
     private let models: Set<AirportModel>
     
-    init(models: Set<AirportModel>,  navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(models: Set<AirportModel>,  rooter: Routing) {
+        self.rooter = rooter
         self.models = models
     }
     
@@ -25,6 +25,7 @@ final class AirportsCoordinator: BaseCoordinator {
             let title = models.first?.city ?? ""
             return AirportsViewModel(input: $0, dependencies: (title: title, models: models, currentLocation: locationService.currentLocation))
         }
-        self.navigationController.pushViewController(view, animated: true)
+        
+        rooter.push(view, isAnimated: true, onNavigationBack: isCompleted)
     }
 }
