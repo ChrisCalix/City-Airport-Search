@@ -29,6 +29,7 @@
 		C31E4B072A1753260017F328 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4B062A1753260017F328 /* Drawable.swift */; };
 		C31E4B092A1753CC0017F328 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4B082A1753CC0017F328 /* Routing.swift */; };
 		C31E4B0B2A1754450017F328 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4B0A2A1754450017F328 /* Router.swift */; };
+		C31E4B132A175A0F0017F328 /* City_Airport_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E4B122A175A0F0017F328 /* City_Airport_SearchTests.swift */; };
 		C3F0B2782A16B39D00BF63D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2772A16B39D00BF63D8 /* AppDelegate.swift */; };
 		C3F0B27A2A16B39D00BF63D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2792A16B39D00BF63D8 /* SceneDelegate.swift */; };
 		C3F0B27C2A16B39D00BF63D8 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B27B2A16B39D00BF63D8 /* SearchCityViewController.swift */; };
@@ -44,6 +45,16 @@
 		C3F0B2A02A16BF3800BF63D8 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B29F2A16BF3800BF63D8 /* BaseCoordinator.swift */; };
 		C3F0B2A32A16BFB000BF63D8 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F0B2A22A16BFB000BF63D8 /* UIViewController+extension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C31E4B142A175A0F0017F328 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F0B26C2A16B39D00BF63D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3F0B2732A16B39D00BF63D8;
+			remoteInfo = "City Airport Search";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C31E4AD22A16C4000017F328 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -68,6 +79,8 @@
 		C31E4B062A1753260017F328 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 		C31E4B082A1753CC0017F328 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		C31E4B0A2A1754450017F328 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C31E4B102A175A0F0017F328 /* City Airport SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "City Airport SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31E4B122A175A0F0017F328 /* City_Airport_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_Airport_SearchTests.swift; sourceTree = "<group>"; };
 		C3F0B2742A16B39D00BF63D8 /* City Airport Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Airport Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F0B2772A16B39D00BF63D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F0B2792A16B39D00BF63D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +97,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C31E4B0D2A175A0F0017F328 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3F0B2712A16B39D00BF63D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,10 +182,19 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		C31E4B112A175A0F0017F328 /* City Airport SearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				C31E4B122A175A0F0017F328 /* City_Airport_SearchTests.swift */,
+			);
+			path = "City Airport SearchTests";
+			sourceTree = "<group>";
+		};
 		C3F0B26B2A16B39D00BF63D8 = {
 			isa = PBXGroup;
 			children = (
 				C3F0B2762A16B39D00BF63D8 /* City Airport Search */,
+				C31E4B112A175A0F0017F328 /* City Airport SearchTests */,
 				C3F0B2752A16B39D00BF63D8 /* Products */,
 				C3F0B2972A16BB7700BF63D8 /* Frameworks */,
 			);
@@ -175,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C3F0B2742A16B39D00BF63D8 /* City Airport Search.app */,
+				C31E4B102A175A0F0017F328 /* City Airport SearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +283,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C31E4B0F2A175A0F0017F328 /* City Airport SearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C31E4B162A175A0F0017F328 /* Build configuration list for PBXNativeTarget "City Airport SearchTests" */;
+			buildPhases = (
+				C31E4B0C2A175A0F0017F328 /* Sources */,
+				C31E4B0D2A175A0F0017F328 /* Frameworks */,
+				C31E4B0E2A175A0F0017F328 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C31E4B152A175A0F0017F328 /* PBXTargetDependency */,
+			);
+			name = "City Airport SearchTests";
+			productName = "City Airport SearchTests";
+			productReference = C31E4B102A175A0F0017F328 /* City Airport SearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C3F0B2732A16B39D00BF63D8 /* City Airport Search */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3F0B2882A16B39F00BF63D8 /* Build configuration list for PBXNativeTarget "City Airport Search" */;
@@ -285,6 +333,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					C31E4B0F2A175A0F0017F328 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = C3F0B2732A16B39D00BF63D8;
+					};
 					C3F0B2732A16B39D00BF63D8 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -308,11 +360,19 @@
 			projectRoot = "";
 			targets = (
 				C3F0B2732A16B39D00BF63D8 /* City Airport Search */,
+				C31E4B0F2A175A0F0017F328 /* City Airport SearchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C31E4B0E2A175A0F0017F328 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3F0B2722A16B39D00BF63D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +388,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C31E4B0C2A175A0F0017F328 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C31E4B132A175A0F0017F328 /* City_Airport_SearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3F0B2702A16B39D00BF63D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +433,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C31E4B152A175A0F0017F328 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3F0B2732A16B39D00BF63D8 /* City Airport Search */;
+			targetProxy = C31E4B142A175A0F0017F328 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C3F0B27D2A16B39D00BF63D8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -385,6 +461,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C31E4B172A175A0F0017F328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9P74L4GXWB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dukena.City-Airport-SearchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/City Airport Search.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/City Airport Search";
+			};
+			name = Debug;
+		};
+		C31E4B182A175A0F0017F328 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9P74L4GXWB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dukena.City-Airport-SearchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/City Airport Search.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/City Airport Search";
+			};
+			name = Release;
+		};
 		C3F0B2862A16B39F00BF63D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +672,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C31E4B162A175A0F0017F328 /* Build configuration list for PBXNativeTarget "City Airport SearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C31E4B172A175A0F0017F328 /* Debug */,
+				C31E4B182A175A0F0017F328 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C3F0B26F2A16B39D00BF63D8 /* Build configuration list for PBXProject "City Airport Search" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
